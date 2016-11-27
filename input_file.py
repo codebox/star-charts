@@ -1,10 +1,11 @@
 import codecs
+from star_data import StarData, StarDataList
 
 class InputFile:
     def __init__(self, file_path):
         self.file_path = file_path
 
-    def get_stars(self, ra_range, dec_range, min_mag):
+    def get_stars(self, sky_area):
         """
         Expected line format:
             <RA>,<DEC>,<MAG>
@@ -18,13 +19,13 @@ class InputFile:
             parts = line.split(',')
             ra, dec, mag = map(float, parts[:3])
             label = '' if len(parts) < 4 else parts[3]
-            if mag > min_mag: #because smaller mag values mean brighter stars
+            if mag > sky_area.mag_min: #because smaller mag values mean brighter stars
                 continue
-            if not (ra_range[0] <= ra <= ra_range[1]):
+            if not (sky_area.ra_min <= ra <= sky_area.ra_max):
                 continue
-            if not (dec_range[0] <= dec <= dec_range[1]):
+            if not (sky_area.dec_min <= dec <= sky_area.dec_max):
                 continue
 
-            matches.append((ra, dec, mag, label))
+            matches.append(StarData(ra, dec, mag, label))
 
-        return matches
+        return StarDataList(matches)
