@@ -4,7 +4,7 @@ from input_file import InputFile
 from diagram import Diagram
 from coord_calc import CoordCalc
 
-f = InputFile('stardata/in.csv')
+f = InputFile('stardata.csv')
 
 area = sky_area.SKY_AREA_ORION
 star_data_list = f.get_stars(area)
