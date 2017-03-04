@@ -6,6 +6,7 @@ class SkyArea:
         self.dec_max = max(dec0, dec1)
         self.mag_min = mag_min
 
-SKY_AREA_ORION  = SkyArea(5, 6, -10, 10, 8)
-SKY_AREA_TAURUS = SkyArea(4, 6, 10, 30, 6)
-SKY_AREA_NORTH = SkyArea(0, 20, 0, 60, 6)
+SKY_AREA_ORION  = SkyArea(4.5, 6.5, -15, 15, 8)
+SKY_AREA_TAURUS = SkyArea(4, 6, 10, 30, 8)
+SKY_AREA_NORTH = SkyArea(0, 24, 50, 90, 8)
+SKY_AREA_URSA_MINOR = SkyArea(14, 18, 60, 90, 9)
