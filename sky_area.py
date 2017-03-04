@@ -8,5 +8,6 @@ class SkyArea:
 
 SKY_AREA_ORION  = SkyArea(4.5, 6.5, -15, 15, 8)
 SKY_AREA_TAURUS = SkyArea(4, 6, 10, 30, 8)
-SKY_AREA_NORTH = SkyArea(0, 24, 50, 90, 8)
+SKY_AREA_NORTH = SkyArea(0, 24, 50, 90, 7)
+SKY_AREA_SOUTH = SkyArea(0, 24, -50, -90, 7)
 SKY_AREA_URSA_MINOR = SkyArea(14, 18, 60, 90, 9)

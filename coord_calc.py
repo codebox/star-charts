@@ -7,7 +7,10 @@ class CoordCalc:
         self.star_data_list = star_data_list
         self.area = area
         self.center_ra_angle  = self._ra_to_angle((area.ra_min + area.ra_max)/2)
-        self.center_dec_angle = self._dec_to_angle((area.dec_min + area.dec_max)/2)
+        if area.ra_max - area.ra_min >= 12:
+            self.center_dec_angle = self._dec_to_angle(90 if abs(area.dec_min) < abs(area.dec_max) else -90)
+        else:
+            self.center_dec_angle = self._dec_to_angle((area.dec_min + area.dec_max)/2)
         self.diagram_size = diagram_size
 
     def _ra_to_angle(self, ra):
@@ -102,7 +105,7 @@ class CoordCalc:
 
         return points
 
-    def calc_curves(self, ra_steps=10, dec_steps=10):
+    def calc_curves(self, ra_steps=100, dec_steps=100):
         curves = []
 
         curves.append(self.calc_ra_curve(self.area.ra_min, ra_steps))

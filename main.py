@@ -6,7 +6,7 @@ from coord_calc import CoordCalc
 
 f = InputFile('stardata/in.csv')
 
-area = sky_area.SKY_AREA_NORTH
+area = sky_area.SKY_AREA_ORION
 star_data_list = f.get_stars(area)
 
 cc = CoordCalc(star_data_list, area, 500)
