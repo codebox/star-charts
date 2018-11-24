@@ -17,7 +17,7 @@ class InputFile:
         matches = []
         for line in codecs.open(self.file_path, 'r', 'utf-8').readlines():
             parts = line.split(',')
-            ra, dec, mag = map(float, parts[:3])
+            ra, dec, mag = list(map(float, parts[:3]))
             label = '' if len(parts) < 4 else parts[3]
             if mag > sky_area.mag_min: #because smaller mag values mean brighter stars
                 continue

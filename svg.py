@@ -10,7 +10,7 @@ class Svg:
         self.elements.append('<line x1="{}" y1="{}" x2="{}" y2="{}" stroke-width="{}" stroke="{}"/>'.format(x1, y1, x2, y2, width, colour))
 
     def text(self, x, y, l, colour, size, align='left', decoration='None'):
-        self.elements.append(u'<text x="{}" y="{}" text-anchor="{}" text-decoration="{}" style="fill: {}; font-size: {}px; font-family: monospace">{}</text>'.format(x, y, align, decoration, colour, size, l))
+        self.elements.append('<text x="{}" y="{}" text-anchor="{}" text-decoration="{}" style="fill: {}; font-size: {}px; font-family: monospace">{}</text>'.format(x, y, align, decoration, colour, size, l))
 
     def circle(self, x, y, d, colour):
         self.elements.append('<circle cx="{}" cy="{}" r="{}" fill="{}" />'.format(x, y, d, colour))

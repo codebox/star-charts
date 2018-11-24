@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from __future__ import division
+
 from math import sin, cos, degrees, radians, pi
 
 class CoordCalc:
@@ -38,10 +38,10 @@ class CoordCalc:
             star_data.x, star_data.y = self._angle_to_xy(star_data.ra_angle, star_data.dec_angle)
 
     def _offset_and_scale_xy(self):
-        min_x = min(map(lambda sd : sd.x, self.star_data_list.data))
-        min_y = min(map(lambda sd : sd.y, self.star_data_list.data))
-        max_x = max(map(lambda sd : sd.x, self.star_data_list.data))
-        max_y = max(map(lambda sd : sd.y, self.star_data_list.data))
+        min_x = min([sd.x for sd in self.star_data_list.data])
+        min_y = min([sd.y for sd in self.star_data_list.data])
+        max_x = max([sd.x for sd in self.star_data_list.data])
+        max_y = max([sd.y for sd in self.star_data_list.data])
 
         x_range = max_x - min_x
         y_range = max_y - min_y
@@ -66,7 +66,7 @@ class CoordCalc:
         self.offset_and_scale_x = offset_and_scale_x
         self.offset_and_scale_y = offset_and_scale_y
 
-        map(offset_and_scale, self.star_data_list.data)
+        list(map(offset_and_scale, self.star_data_list.data))
 
     def process(self):
         self._populate_angles()
