@@ -2,8 +2,8 @@
 
 This Python script will generate SVG star charts, like the ones shown below:
 
-<img src="http://codebox.net/graphics/starcharts/orion.png" height="480px" width="480px" alt="Star Chart showing Orion" /><br>
-<sup>The constellation Orion, showing stars down to magnitude 8 [original SVG](http://codebox.net/graphics/starcharts/orion.svg)</sup>
+<img src="https://codebox.net/assets/images/star-charts-with-python/orion.png" height="480px" width="480px" alt="Star Chart showing Orion" /><br>
+<sup>The constellation Orion, showing stars down to magnitude 8 [original SVG](https://codebox.net/assets/images/star-charts-with-python/orion.svg)</sup>
 
 The script reads data about the position and brightness of stars from a CSV file like [this one](https://raw.githubusercontent.com/codebox/star-charts/master/stardata.csv).
 Each row in the CSV file contains information about a single star in 4 columns as follows:
@@ -24,10 +24,10 @@ For example
 
 The area to be covered by the chart is specified using a <a href="https://github.com/codebox/star-charts/blob/master/sky_area.py">SkyArea</a> object, which must be <a href="https://github.com/codebox/star-charts/blob/master/main.py#L9">referenced the main.py file</a>. A few pre-defined areas are included, such as complete northern and southern sky maps:
 
-<img src="http://codebox.net/graphics/starcharts/northern_sky.png" height="420px" width="420px" class="" alt="Star Chart showing the northern sky" />
-<img src="http://codebox.net/graphics/starcharts/southern_sky.png" height="420px" width="420px" class="" alt="Star Chart showing the southern sky" />
+<img src="https://codebox.net/assets/images/star-charts-with-python/northern_sky.png" height="420px" width="420px" class="" alt="Star Chart showing the northern sky" />
+<img src="https://codebox.net/assets/images/star-charts-with-python/southern_sky.png" height="420px" width="420px" class="" alt="Star Chart showing the southern sky" />
 
-<sup>Maps of the Northern and Southern skies, showing stars down to magnitude 7 (original SVGs: [North](http://codebox.net/graphics/starcharts/northern_sky.svg) and [South](http://codebox.net/graphics/starcharts/southern_sky.svg)</sup>
+<sup>Maps of the Northern and Southern skies, showing stars down to magnitude 7 (original SVGs: [North](https://codebox.net/assets/images/star-charts-with-python/northern_sky.svg) and [South](https://codebox.net/assets/images/star-charts-with-python/southern_sky.svg)</sup>
 
 The script is run by simply executing the main.py file, as follows:
 
