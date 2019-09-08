@@ -1,4 +1,4 @@
-from __future__ import division
+
 from svg import Svg
 import codecs
 
@@ -64,7 +64,7 @@ class Diagram:
 
         # next add curves
         for curve_points in self.curves:
-            svg.curve(map(lambda cp: self._invert_and_offset(cp[0], cp[1]), curve_points), CURVE_WIDTH, CURVE_COLOUR)
+            svg.curve([self._invert_and_offset(cp[0], cp[1]) for cp in curve_points], CURVE_WIDTH, CURVE_COLOUR)
 
         # title
         center_x = self.star_data_list.max_x/2 + MARGIN_X
