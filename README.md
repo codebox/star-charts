@@ -37,4 +37,4 @@ python main.py
 
 The SVG file will be created in the current directory, and will be named <b>star-chart.svg</b>
 
-Please note that the script is designed to be run using <b>Python 2</b>, it will not run correctly with Python 3.
+Please note that the script is designed to be run using <b>Python 3</b>, it will not run correctly with Python 2.
